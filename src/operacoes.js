@@ -40,15 +40,13 @@ function validarCadastro(nome, idade, email) {
 
 // Questão 4
 
-function validarCadastro(nome, idade, email) {
-    if (!nome || nome.trim() === "") {
-        return false;
+function calcularFrete(valorCompra, distancia) {
+    if (valorCompra < 0 || distancia < 0) {
+        throw new Error("Valores inválidos");
     }
-    if (!idade || idade < 18 || idade > 100) {
-        return false;
+    if (valorCompra >= 200) {
+        return 0;
     }
-    if (!email || !email.includes("@")) {
-        return false;
-    }
-    return true;
+    return distancia * 2;
 }
+
