@@ -1,4 +1,4 @@
-//QUESTÃO 1
+//QUESTÃO 1-------------------------------------------------------------------------------------------------------------------------------
 
 function calcularDesconto(valor, percentual) {
     if (valor <= 0 || percentual < 0 || percentual > 100) {
@@ -9,7 +9,7 @@ function calcularDesconto(valor, percentual) {
 }
 
 
-// Questão 2
+// Questão 2--------------------------------------------------------------------------------------------------------------------------------------
 
 
 function verificarAprovacao(nota) {
@@ -23,7 +23,7 @@ function verificarAprovacao(nota) {
 }
 
 
-//QUESTÃO 3
+//QUESTÃO 3--------------------------------------------------------------------------------------------------------------------------------
 
 function validarCadastro(nome, idade, email) {
     if (!nome || nome.trim() === "") {
@@ -38,7 +38,7 @@ function validarCadastro(nome, idade, email) {
     return true;
 }
 
-// Questão 4
+// Questão 4-----------------------------------------------------------------------------------------------------------------------------
 
 function calcularFrete(valorCompra, distancia) {
     if (valorCompra < 0 || distancia < 0) {
@@ -50,3 +50,57 @@ function calcularFrete(valorCompra, distancia) {
     return distancia * 2;
 }
 
+
+//Questão 5-------------------------------------------------------------------------------------------------------------------------------
+
+function converterCelsiusParaFahrenheit(celsius) {
+    if (typeof celsius !== "number") {
+        throw new Error("A temperatura deve ser numérica");
+    }
+    return (celsius * 9 / 5) + 32;
+}
+
+//Questão 6------------------------------------------------------------------------------------------------------------------------------
+
+function calcularTotal(quantidade, precoUnitario) {
+    if (quantidade < 0 || precoUnitario < 0) {
+        throw new Error("Valores inválidos");
+    }
+    return quantidade * precoUnitario;
+}
+
+
+//Questão 7-------------------------------------------------------------------------------------------------------------------------------
+
+function validarSenha(senha) {
+    if (senha.length < 8) {
+        return false;
+    }
+    return true;
+}
+
+
+//Questão 8-------------------------------------------------------------------------------------------------------------------------------
+
+function verificarEstoque(estoque, quantidadeSolicitada) {
+    if (quantidadeSolicitada <= 0) {
+        throw new Error("Quantidade inválida");
+    }
+    if (quantidadeSolicitada > estoque) {
+        return "Estoque insuficiente";
+    }
+    return "Pedido aprovado";
+}
+
+
+//Questão 9-------------------------------------------------------------------------------------------------------------------------------
+
+function calcularMedia(nota1, nota2) {
+    if (nota1 < 0 || nota1 > 10 || nota2 < 0 || nota2 > 10) {
+        throw new Error("Notas inválidas");
+    }
+    return (nota1 + nota2) / 2;
+}
+
+
+//------------------------------------------------------------------------------------------------------------------------------------------

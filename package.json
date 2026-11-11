@@ -6,5 +6,8 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watchAll"
+  },
+  "dependencies": {
+    "jest": "^30.5.2"
   }
 }
